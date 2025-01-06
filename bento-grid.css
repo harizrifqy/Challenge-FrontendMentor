@@ -1,0 +1,152 @@
+body {
+    width: 1440px;
+    font-family: Roboto, Arial;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+
+/* Styling untuk card */
+.card {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    gap: 20px; /* Jarak antar-card */
+    padding: 20px; /* Spasi di dalam grid-container */
+    margin: 100px 200px;
+}
+
+
+.first-card {
+    display: grid;
+    grid-template-rows: 125px 1fr;
+    height: 310px;
+    background-color: hsl(31, 66%, 93%); 
+    border-radius: 10px; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    padding: 20px; 
+    transition: transform 0.3s, box-shadow 0.3s; 
+}
+
+.first-card:hover {
+    transform: translateY(-5px); /* Card sedikit terangkat */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Bayangan lebih tegas */
+}
+
+
+.title-first-card {
+    font-size: 30px;
+    font-weight: 500;
+    line-height: 30px;
+    margin-top: 40px;
+    margin-left: 16px;
+}
+
+.title-first-card span {
+    color: rgb(133, 63, 187);
+    margin-left: 0;
+}
+
+.img-create-post-cont {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0;
+}
+
+
+.img-create-post {
+    width: 150px;
+}
+
+/* Card kedua */
+
+.second-card {
+    display: grid;
+    grid-template-rows: 120px auto 1fr;
+    height: 40%;
+    background-color: hsl(256, 67%, 59%); 
+    border-radius: 10px; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    padding: 20px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.second-card:hover {
+    transform: translateY(-5px); /* Card sedikit terangkat */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Bayangan lebih tegas */
+}
+
+
+.title-second-card {
+    color: white;
+    font-size: 42px;
+    line-height: 40px;
+    margin-top: 20px;
+    margin-bottom: 0;
+    text-align: center;
+}
+
+.title-second-card span {
+    color: hsl(39, 100%, 71%);
+    margin-left: 0;
+}
+
+.rating {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0;
+}
+
+
+.img-stars {
+    width: 155px;
+}
+
+
+.reviews{
+    color: white;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+
+.third-card {
+    display: grid;
+    grid-template-rows: auto auto 1fr;
+    gap: 16px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 16px;
+    max-width: 180px;
+    height: 500px;
+    background-color: hsl(254, 88%, 90%);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.title-third-card {
+    font-size: 24px;
+    font-weight: 500;
+    margin-top: 20px;
+    margin-bottom: 0;
+}
+
+.img-schedule-sosmed {
+    display: grid;
+    overflow: hidden;
+    border-top-left-radius: 8px;
+    height: 268px; /* Tinggi gambar */
+    align-items: center;
+    justify-items: center;
+}
+
+.img-time-post {
+    width: 300px;
+}
+
+.description-optimize {
+    display: grid;
+    justify-content: start;
+    align-items: start;
+}
+

@@ -23,12 +23,10 @@
             margin: 20px auto;
         }
 
-
         .card-nft {
             width: 300px;
             height: 550px;
             margin: 20px;
-            padding: 10px;
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -40,18 +38,57 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            position: relative;
+            width: 290px;
         }
-
 
         .img-nft-equilibrium {
             margin-top: 4px;
-            width: 290px;
+            margin-left: 8px;
+            width: 100%;
             border-radius: 8px;
+            object-fit: cover;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .img-nft:hover .img-nft-equilibrium {
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .overlay-img-view {
+            position: absolute;
+            border-radius: 8px;
+            top: 2px;
+            left: 4px;
+            width: 100%;
+            height: 100%;
+            background-color: hsla(178, 100%, 50%, 0.478);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+            cursor: pointer;
+        }
+
+        .img-nft:hover .overlay-img-view {
+            opacity: 1;
+        }
+
+        .img-view {
+            width: 50px; /* Ukuran ikon */
+            height: 50px; /* Ukuran ikon */
+            object-fit: contain;
         }
 
         .name-nft {
             font-size: 22px;
             color: white;
+        }
+
+        .name-nft:hover {
+            color: hsl(178, 100%, 50%);
+            cursor: pointer;
         }
 
         .description-ntf {
@@ -80,7 +117,6 @@
             margin-left: 7px;
         }
 
-
         .time-container {
             display: flex;
             align-items: center;
@@ -90,7 +126,6 @@
         .img-time {
             width: 18px;
         }
-
 
         .time {
             color: hsl(215, 51%, 70%);
@@ -122,6 +157,11 @@
         footer span{
             color: white;
             margin-left: 5px;
+            cursor: pointer;
+        }
+
+        footer span:hover {
+            color: hsl(178, 100%, 50%);
         }
     </style>
 
@@ -131,27 +171,30 @@
         <div class="card-nft">
             <header class="card-header">
                 <div class="img-nft">
-                    <img class="img-nft-equilibrium" src="images\image-equilibrium.jpg" alt="">
+                    <img class="img-nft-equilibrium" src="images/image-equilibrium.jpg" alt="">
+                    <div class="overlay-img-view">
+                        <img class="img-view" src="images/icon-view.svg" alt="">
+                    </div>
                 </div>
                 <section class="content-nft">
                     <h3 class="name-nft">Equilibrium #3429</h3>
                     <p class="description-ntf">Our Equilibrium collection promotes balance and calm.</p>
                     <div class="amount-and-time-nft">
                         <div class="amount-eth-container">
-                            <img class="img-ethereum" src="images\icon-ethereum.svg" alt="">
+                            <img class="img-ethereum" src="images/icon-ethereum.svg" alt="">
                             <p class="amount-nft">0.041 ETH</p>
                         </div>
                         <div class="time-container">
-                            <img class="img-time" src="images\icon-clock.svg" alt="">
-                            <p class="time">3 days letf</p>
+                            <img class="img-time" src="images/icon-clock.svg" alt="">
+                            <p class="time">3 days left</p>
                         </div>
                     </div>
                 </section>
             </header>
             <hr>
             <footer>
-                <img class="img-profil" src="images\image-avatar.png" alt="">
-                Creation of <span> Jules Wyvern</span>
+                <img class="img-profil" src="images/image-avatar.png" alt="">
+                Creation of <span>Jules Wyvern</span>
             </footer>
         </div>
     </div>

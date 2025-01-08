@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NTF Preview Card</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: "Outfit", serif;
+            font-size: 18px;
+            width: 1440px;
+            background-color: hsl(217, 54%, 11%);
+        }
+
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 20px auto;
+        }
+
+
+        .card-nft {
+            width: 300px;
+            height: 550px;
+            margin: 20px;
+            padding: 10px;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            background-color: hsl(216, 50%, 16%);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .img-nft {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+
+        .img-nft-equilibrium {
+            margin-top: 4px;
+            width: 290px;
+            border-radius: 8px;
+        }
+
+        .name-nft {
+            font-size: 22px;
+            color: white;
+        }
+
+        .description-ntf {
+            color: hsl(215, 51%, 70%);
+            margin-bottom: 4px;
+        }
+
+        .amount-and-time-nft {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            margin-top: 0;
+        }
+
+        .amount-eth-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .img-ethereum {
+            width: 11px;
+        }
+
+        .amount-nft {
+            font-size: 17px;
+            color: hsl(178, 100%, 50%);
+            margin-left: 7px;
+        }
+
+
+        .time-container {
+            display: flex;
+            align-items: center;
+            justify-content: end;
+        }
+
+        .img-time {
+            width: 18px;
+        }
+
+
+        .time {
+            color: hsl(215, 51%, 70%);
+            margin-left: 8px;
+        }
+
+        hr {
+            border: 0;          /* Menghapus border default */
+            height: 1px;        /* Menentukan ketebalan garis */
+            background-color: hsl(215, 32%, 27%); 
+            margin-top: 10px;     /* Menambahkan jarak di atas dan bawah garis */
+        }
+
+        footer {
+            color: hsl(215, 51%, 70%);
+            display: flex;
+            align-items: center;
+            justify-content: start;
+            margin-top: 20px;
+        }
+
+        .img-profil {
+            width: 30px;
+            border: 1px solid white;
+            border-radius: 20px;
+            margin-right: 16px;
+        }
+
+        footer span{
+            color: white;
+            margin-left: 5px;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="container">
+        <div class="card-nft">
+            <header class="card-header">
+                <div class="img-nft">
+                    <img class="img-nft-equilibrium" src="images\image-equilibrium.jpg" alt="">
+                </div>
+                <section class="content-nft">
+                    <h3 class="name-nft">Equilibrium #3429</h3>
+                    <p class="description-ntf">Our Equilibrium collection promotes balance and calm.</p>
+                    <div class="amount-and-time-nft">
+                        <div class="amount-eth-container">
+                            <img class="img-ethereum" src="images\icon-ethereum.svg" alt="">
+                            <p class="amount-nft">0.041 ETH</p>
+                        </div>
+                        <div class="time-container">
+                            <img class="img-time" src="images\icon-clock.svg" alt="">
+                            <p class="time">3 days letf</p>
+                        </div>
+                    </div>
+                </section>
+            </header>
+            <hr>
+            <footer>
+                <img class="img-profil" src="images\image-avatar.png" alt="">
+                Creation of <span> Jules Wyvern</span>
+            </footer>
+        </div>
+    </div>
+</body>
+</html>

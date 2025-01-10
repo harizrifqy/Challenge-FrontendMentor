@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: grey;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            grid-template-rows: repeat(auto-fit, minmax(50px, 1fr));
+            grid-template-areas: 
+            'nav nav nav nav'
+            'header header sidebar sidebar'
+            'header header sidebar sidebar'
+            'content content content content';
+        }
+
+        .navbar {
+            grid-area: nav;
+            background-color: cyan;
+        }
+
+        .header {
+            grid-area: header;
+            background-color: lightblue;
+        }
+
+        .sidebar {
+            grid-area: sidebar;
+            background-color: lightpink;
+        }
+
+        .content {
+            grid-area: content;
+            background-color: cyan;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav class="navbar">Navbar</nav>
+        <header class="header">Header</header>
+        <aside class="sidebar">Sidebar</aside>
+        <div class="content">Content Bawah</div>
+    </div>
+</body>
+</html>

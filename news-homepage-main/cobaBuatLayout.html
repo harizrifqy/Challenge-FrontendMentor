@@ -4,36 +4,124 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
             padding: 0;
         }
 
-        body {
-            background-color: grey;
+        img {
+            width: 100%;
         }
 
-        .container {
+        body {
+            font-family: "Inter", Arial, Helvetica, sans-serif;
+            font-size: 15px;
+            margin: 100px;
+            width: 1440px;
+        }
+
+        .grid-container {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             grid-template-rows: repeat(auto-fit, minmax(50px, 1fr));
             grid-template-areas: 
             'nav nav nav nav'
-            'header header sidebar sidebar'
-            'header header sidebar sidebar'
+            'header header header sidebar'
+            'header header header sidebar'
             'content content content content';
+            gap: 20px;
         }
 
+
+        /* Navigasi */
         .navbar {
             grid-area: nav;
-            background-color: cyan;
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(10px, 1fr));
         }
+        
+        .logo {
+            width: 50px;
+        }
+
+        .menu {
+            list-style: none;
+        }
+        
+        .navbar ul {
+            list-style: none;
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(10px, 1fr));
+            color: hsl(236, 13%, 42%);
+            transition: color 0.3s ease;
+        }
+
+
+        .navbar a {
+            display: block;
+            color: hsl(236, 13%, 42%);
+            text-decoration: none;
+        }
+
+        .navbar li a:hover {
+            color: hsl(5, 85%, 63%);
+        }
+
+
+
+        /* Header */
 
         .header {
             grid-area: header;
-            background-color: lightblue;
+            width: 70em;
         }
+
+        .img-utama {
+            width: 70em;
+        }
+
+        .content-header {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, 200px, 1fr);
+            grid-template-areas: 
+            'title-content description';
+            gap: 25px;
+            margin-top: 50px;
+        }
+
+        .content-header h1 {
+            font-size: 5em;
+            line-height: 1em;
+            width: 480px;
+        }
+
+        .content-header p {
+            font-size: 1.3em;
+            color: hsl(236, 13%, 42%);
+            margin-bottom: 30px;
+        }
+
+        .content-header button {
+            background-color: black;
+            color: white;
+            font-weight: bold;
+            border: none;
+            padding: 16px 38px;
+            letter-spacing: 3px;
+            transition: color 0.3s ease;
+        }
+
+        .content-header button:hover {
+            background-color: hsl(5, 85%, 63%);
+            color: black;
+        }
+
+
+
 
         .sidebar {
             grid-area: sidebar;
@@ -47,9 +135,40 @@
     </style>
 </head>
 <body>
-    <div class="container">
-        <nav class="navbar">Navbar</nav>
-        <header class="header">Header</header>
+    <div class="grid-container">
+        <nav class="navbar">
+            <div class="brand">
+                <img class="logo" src="assets\images\logo.svg" alt="">
+            </div>
+            <div class="menu-icon" id="menu-icon">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="menu">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">New</a></li>
+                <li><a href="#">Popular</a></li>
+                <li><a href="#">Trending</a></li>
+                <li><a href="#">Categories</a></li>
+            </ul>
+        </nav>
+        <header class="header">
+            <div class="header-img">
+                <img class="img-utama" src="assets\images\image-web-3-desktop.jpg" alt="">
+            </div>
+            <div class="content-header">
+                <div class="title-content">
+                    <h1>The Bright Future of Web 3.0?</h1>
+                </div>
+                <div class="description">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                        Repudiandae natus vitae quo, aliquid quam consectetur suscipit
+                        Ut explicabo facilis quae aut excepturi!</p>
+                    <button>READ MORE</button>
+                </div>
+            </div>
+        </header>
         <aside class="sidebar">Sidebar</aside>
         <div class="content">Content Bawah</div>
     </div>

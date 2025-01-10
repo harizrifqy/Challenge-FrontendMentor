@@ -8,19 +8,21 @@ img {
 }
 
 body {
-    font-family: "Inter", Arial, Helvetica, sans-serif;
+    font-family: Inter, Arial, Helvetica, sans-serif;
     font-size: 15px;
-    margin: 200px;
+    margin: 100px;
+    width: 1440px;
 }
 
 .grid-container {
     display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    grid-template-rows: repeat(auto-fit, minmax(50px, 1fr));
     grid-template-areas: 
-    'nav nav nav '
-    'header header sidebar'
-    'header header sidebar'
-    'main main main';
-    gap: 20px;
+    'nav nav nav nav'
+    'header header sidebar sidebar'
+    'header header sidebar sidebar'
+    'main main main main';
 }
 
 
@@ -29,10 +31,8 @@ body {
 
 .navbar {
     grid-area: nav;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
-    align-items: center;
-    margin-bottom: 30px;
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(10px, 650px));
 }
 
 .navbar .brand {
@@ -41,26 +41,54 @@ body {
 
 .navbar ul {
     list-style: none;
-    display: grid;
+    display: grid; 
     grid-template-columns: repeat(auto-fit, minmax(10px, 1fr));
+    color: hsl(236, 13%, 42%);
     transition: color 0.3s ease;
 }
-.listmenu:hover {
-    color: hsl(5, 85%, 63%);
-}
+
 
 .navbar a {
     display: block;
     color: hsl(236, 13%, 42%);
     text-decoration: none;
-    padding: 5px;
 }
+
+
+.menu li a:hover {
+    color: hsl(5, 85%, 63%);
+}
+
+
+/* icon burger */
+/* Menu Burger untuk Mobile */
+.menu-icon {
+    display: none; /* Sembunyikan di layar besar */
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.menu-icon span {
+    width: 25px;
+    height: 3px;
+    background-color: hsl(236, 13%, 42%);
+    transition: background-color 0.3s ease;
+}
+
+.menu-icon:hover span {
+    background-color: hsl(5, 85%, 63%);
+}
+
+
+
+
+
 
 
 /* Header */
 .header {
     grid-area: header;
-    display: grid;
 }
 
 .header-news {
@@ -68,6 +96,11 @@ body {
     grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
     margin-top: 18px;
 }
+
+.img-news-utama {
+    width: 51.5em;
+}
+
 
 .title-news {
     font-size: 2em;
@@ -85,15 +118,19 @@ body {
     margin-top: 20px;
     background-color: black;
     color: white;
+    font-weight: 500;
     letter-spacing: 3px;
-    padding: 10px 28px;
+    padding: 12px 28px;
     border: none;
     cursor: pointer;
+    transition: color 0.3s ease;
 }
 
-.img-news-utama {
-    width: 36em;
+.info-news button:hover {
+    color: black;
+    background-color: hsl(5, 85%, 63%);
 }
+
 
 
 /* Sidebar */
@@ -104,9 +141,8 @@ body {
     padding: 20px;
     background-color: hsl(240, 100%, 5%);
     color: white;
-    /* width: 270px; */
+    width: 300px;
     cursor: pointer;
-    margin-left: 0;
 }
 
 
@@ -141,7 +177,9 @@ body {
 
 .content {
     display: flex;
+    justify-content: space-between;
     width: 300px;
+    background-color: grey;
 }
 
 
@@ -153,7 +191,7 @@ body {
 }
 
 .info-content h3 {
-    font-size: 2em;
+    font-size: 2.1em;
     letter-spacing: 1px;
     color: hsl(5, 85%, 63%);
     padding: 5px;
@@ -174,3 +212,68 @@ body {
     color: hsl(236, 13%, 42%);
 }
 
+
+/* Responsif untuk Mobile */
+@media (max-width: 500px) {
+    .grid-container {
+        display: grid;
+        grid-template-areas: 
+        'nav '
+        'header'
+        'sidebar'
+        'main';
+        gap: 20px;
+    }
+
+    .navbar ul {
+        display: none;
+    }
+
+    .menu {
+        display: none; /* Sembunyikan menu di mobile */
+        flex-direction: column;
+        background-color: #fff;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        padding: 10px;
+        border-radius: 5px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .menu.active {
+        display: flex; /* Tampilkan menu jika class "active" ada */
+    }
+
+    .menu-icon {
+        display: flex; /* Tampilkan ikon burger di mobile */
+    }
+
+     /* Section-buttom Responsif */
+    .section-buttom {
+        grid-template-columns: 1fr; /* Atur jadi 1 kolom */
+    }
+
+    .content {
+        width: 100%;
+    }
+
+    .img-content-1,
+    .img-content-2,
+    .img-content-3 {
+        width: 100px; /* Sesuaikan ukuran gambar */
+        margin: 0 auto 15px; /* Center dan beri jarak bawah */
+    }
+
+    .info-content h3 {
+        font-size: 1.5em; /* Ukuran lebih kecil untuk mobile */
+    }
+
+    .info-content h4 {
+        font-size: 1em;
+    }
+
+    .info-content p {
+        font-size: 0.9em;
+    }
+}

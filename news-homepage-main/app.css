@@ -64,6 +64,25 @@
         }
 
 
+        /* Gaya Dasar Menu Burger */
+        .menu-icon {
+            display: none; /* Sembunyikan menu burger secara default */
+            cursor: pointer;
+            width: 40px;
+            height: 30px;
+            position: absolute; /* Posisi absolut untuk fleksibilitas */
+            top: 20px; /* Sesuaikan jarak dari atas */
+            left: 38em; /* Tempatkan di kiri layar */
+        }
+
+        .menu-icon span {
+            display: block;
+            width: 100%;
+            height: 4px;
+            background-color: #333;
+            margin: 5px 0;
+            transition: transform 0.3s ease, opacity 0.3s ease;
+        }
 
         /* Header */
 
@@ -200,7 +219,7 @@
 
 
 
-        @media (max-width: 375px) {
+        @media (max-width: 500px) {
             body {
                 margin: 0 auto; /* Pusatkan body */
                 width: 100%; /* Pastikan body menggunakan lebar penuh */
@@ -224,9 +243,15 @@
                 width: 90px;
             }
 
-            .navbar .menu {
-                display: none; /* Sembunyikan menu */
+
+            .menu-icon {
+                display: block; /* Tampilkan menu burger */
             }
+        
+            .navbar .menu {
+                display: none; /* Sembunyikan menu navigasi secara default */
+            }
+        
 
             /* header */
             .header {
@@ -234,7 +259,7 @@
             }
         
             .img-utama {
-                width: 40em;
+                width: 38em;
                 height: 40em;
                 object-fit: cover;
             }
@@ -257,21 +282,22 @@
             }
 
             .content-header p {
-                font-size: 2.5em;
+                font-size: 2.3em;
                 line-height: 1.4em;
                 width: 100%;
             }
 
             .content-header button {
-                font-size: 1.2em;
+                font-size: 1.4em;
+                letter-spacing: 10px;
                 padding: 1.6em 4em;
             }
             
             /* sidebar */
             .sidebar {
-                width: 80%;
+                width: 85%;
                 height: 40em;
-                padding: 20px; /* Sesuaikan padding */
+                padding: 45px; /* Sesuaikan padding */
             }
         
             .news h3 {

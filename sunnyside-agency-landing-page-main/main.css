@@ -1,40 +1,37 @@
         /* Navbar */
-        nav {
+        .navbar {
             display: flex;
             justify-content: space-between;
             align-items: center;
             padding: 1.4rem 7%;
-            background-color: rgb(62, 62, 62);
             position: fixed;
             top: 0;
             left: 0;
             right: 0;
             z-index: 100;
         }
-        nav .logo {
+
+        .navbar .logo {
+            width: 10rem;
             margin-right: auto;
             cursor: pointer;
         }
 
-        nav .nav-links li {
+        .navbar .nav-links a {
+            color: white;
             display: inline-block;
-            padding: 0 20px;
+            margin: 0 1rem;
         }
 
-        nav .nav-links li a {
-            list-style: none;
-            text-decoration: none;
-            transition: all 0.3s ease 0s;
-            color: #aaa;
+        .navbar .nav-links a:hover {
+            color: hsla(51, 100%, 49%, 0.87);
         }
 
-        nav .nav-links li a:hover {
-            color: hsl(213, 9%, 39%);
-        }
 
-        nav button {
-            padding: 16px 28px;
+        .navbar .nav-links #contact {
+            padding: 10px 22px;
             background-color: #fff;
+            color: black;
             border: none;
             font-weight: 600;
             font-size: 16px;
@@ -44,20 +41,104 @@
             text-transform: uppercase;
         }
 
-        nav button:hover {
-            background-color: hsl(213, 9%, 39%);
+        .navbar .nav-links #contact:hover {
+            background-color: hsla(0, 0%, 100%, 0.395);
+            color: white;
         }
-        
+
         nav .nav-icons a {
             color: #fff;
             margin: 0 0.5rem;
         }
 
         nav .nav-icons a:hover {
-            color: hsl(213, 9%, 39%);
+            color: hsla(51, 100%, 49%, 0.87);
         }
 
         .hamburger-menu {
             display: none;
         }
 
+        /* Header section */
+        .header {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            background-image: url('images/desktop/image-header.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+
+        .header .header-title {
+            display: flex;
+            place-items: center;
+            flex-direction: column;
+            width: 100%;
+        }
+
+        .header .header-title h1 {
+            font-size: 4rem;
+            letter-spacing: 10px;
+            color: white;
+            font-family: Fraunces;
+            padding-bottom: 100px;
+            text-transform: uppercase;
+            /* background-color: #fff; */
+        }
+
+        .header .header-title img {
+            padding-bottom: 4.5rem;
+        }
+
+
+
+
+
+
+        /* Media Queary */
+        /* Laptop */
+        @media( max-width: 1366px ){
+            html {
+                font-size: 75%;
+            }
+        }
+
+        /* Tablet */
+        @media( max-width: 768px ){
+            html {
+                font-size: 62.5%;
+            }
+
+            .hamburger-menu {
+                display: inline-block;
+            }
+
+            .navbar .nav-links{
+                position: absolute;
+                top: 100%;
+                right: -100%;
+                background-color: #ffffff69;
+                width: 25rem;
+                height: 100vh;
+                transition: 0.3s;
+            }
+
+            .navbar .nav-links.active {
+                right: 0;
+            }
+
+            .navbar .nav-links a{
+                color: hsl(213, 9%, 39%);
+                display: block;
+                margin: 1.5rem;
+                padding: 8px;
+                font-size: 1.8rem;
+            }
+
+            .navbar .nav-links a #contact:hover {
+                background-color: hsla(51, 100%, 49%, 0.87);
+                color: black;
+            }
+        }

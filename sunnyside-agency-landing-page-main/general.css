@@ -15,9 +15,9 @@
     }
 
     body {
-    font-family: "Barlow", Fraunces;
+    font-family: 'Barlow', Fraunces;
     min-width: 1440px;
     line-height: 1.5em;
-    margin: 50px auto;
     font-size: 18px;
+    height: 2000px;
     }

@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700..900&display=swap');
+
+:root {
+    --footer:hsl(168, 34%, 41%);
+}
+
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    }
+
+    body {
+    font-family: "Barlow", Fraunces;
+    min-width: 1440px;
+    line-height: 1.5em;
+    margin: 50px auto;
+    font-size: 18px;
+    }

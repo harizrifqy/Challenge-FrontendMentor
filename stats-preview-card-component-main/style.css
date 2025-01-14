@@ -14,6 +14,80 @@
 }
 body {
     font-family: "Inter", Lexend Deca, sans-serif;
-    max-width: 1440px;
     font-size: 15px;
+    background-color: var(--main-bg);
+    color: white;
+    line-height: 1.5;
+}
+
+
+.container {
+    max-width: 1440px;
+    background-color: var(--card-bg);
+    margin: 50px auto;
+    padding: 1rem;
+    box-sizing: border-box;
+    border-radius: 10px;
+    display: flex;
+    background-image: url('images/image-header-desktop.jpg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right;
+    position: relative;
+}
+
+header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 49.5%;
+    height: 100%;
+    background-color: hsla(277, 99%, 32%, 0.453); /* Warna overlay */
+    z-index: 1; /* Overlay berada di atas gambar */
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.left-section {
+    display: flex;
+    flex-direction: column;
+    max-width: 40%;
+    padding: 5rem;
+}
+
+
+.left-section .content h1 {
+    font-size: 3.32rem;
+    line-height: 4rem;
+    margin-bottom: 2rem;
+    font-weight: 700;
+}
+
+.left-section .content h1 span {
+    color: var(--accent);
+}
+
+.left-section .content p {
+    color: var(--main-paragraph);
+    font-size: 1.46rem;
+    margin-bottom: 4rem;
+    width: 95%;
+}
+
+.left-section .company {
+    display: flex;
+    justify-content: space-between;
+    width: 88%;
+}
+
+.left-section .company h3 {
+    font-size: 2rem;
+}
+
+.left-section .company p {
+    font-size: 0.85rem;
+    letter-spacing: 2px;
+    color: hsla(0, 0%, 71%, 0.75);
+    text-transform: uppercase;
 }

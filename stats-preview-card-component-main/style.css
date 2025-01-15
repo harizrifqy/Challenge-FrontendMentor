@@ -41,7 +41,7 @@ header::before {
     position: absolute;
     top: 0;
     right: 0;
-    width: 49.5%;
+    width: 49.6%;
     height: 100%;
     background-color: hsla(277, 99%, 32%, 0.453); /* Warna overlay */
     z-index: 1; /* Overlay berada di atas gambar */
@@ -52,7 +52,7 @@ header::before {
 .left-section {
     display: flex;
     flex-direction: column;
-    max-width: 40%;
+    width: 40%;
     padding: 5rem;
 }
 
@@ -77,7 +77,7 @@ header::before {
 
 .left-section .company {
     display: flex;
-    /* justify-content: space-between; */
+    justify-content: space-between;
     width: 88%;
 }
 
@@ -94,111 +94,30 @@ header::before {
 
 
 
-/* Responsive */
-/* Responsive Additional Queries */
+/* Media Query */
 
-/* Extra Large Devices (Desktops with larger screens, >1440px) */
-@media (min-width: 1441px) {
-    .container {
-        margin: 80px auto;
-        padding: 2rem;
-    }
-    .left-section {
-        max-width: 50%;
-    }
-    .left-section .content h1 {
-        font-size: 4rem;
-        line-height: 4.5rem;
-    }
-    .left-section .content p {
-        font-size: 1.6rem;
-    }
-}
-
-/* Large Tablets and Small Desktops (1024px - 1366px) */
-@media (max-width: 1366px) {
-    .container {
-        flex-direction: column;
-        background-position: center;
-        background-size: cover;
-        padding: 1.5rem;
-    }
-    .left-section {
-        max-width: 100%;
-        padding: 3rem;
-    }
-    .left-section .content h1 {
-        font-size: 3rem;
-        line-height: 3.5rem;
-    }
-    .left-section .content p {
-        font-size: 1.4rem;
-    }
-}
-
-/* Medium Tablets (768px - 1024px) */
-@media (max-width: 1024px) {
-    .container {
-        padding: 1rem;
-    }
-    .left-section {
-        padding: 2rem;
-    }
-    .left-section .content h1 {
-        font-size: 2.5rem;
-        line-height: 3rem;
-    }
-    .left-section .content p {
-        font-size: 1.3rem;
-    }
-}
-
-/* Small Tablets and Large Phones (450px - 768px) */
-@media (max-width: 768px) {
-    .container {
-        flex-direction: column;
-        padding: 1rem;
-    }
-    .left-section {
-        padding: 1.5rem;
-    }
-    .left-section .content h1 {
-        font-size: 2rem;
-        line-height: 2.5rem;
-    }
-    .left-section .content p {
-        font-size: 1.2rem;
-    }
-    .left-section .company {
-        flex-direction: column;
-        align-items: flex-start;
-        width: 100%;
-    }
-    .left-section .company h3 {
-        margin-bottom: 1rem;
-    }
-}
 
 /* Small Phones (<450px) */
 @media (max-width: 450px) {
     .container {
         padding: 1rem;
         flex-direction: column;
-        background-size: contain;
         background-position: top;
         min-height: 100vh;
         border-radius: 10px;
         width: 90%;
     }
     header::before {
-        width: 100%;
-        height: 32.1%;
+        min-width: 100%; /* Mengubah lebar hanya pada media query */
+        height: 37.6%; /* Mengubah tinggi hanya pada media query */
         border-top-left-radius: 10px;
         border-bottom-right-radius: 0;
     }
     .left-section {
+        width: 100% !important;
         margin-top: 20rem;
         padding: 1rem;
+        box-sizing: border-box;
         text-align: center;
     }
     .left-section .content h1 {
@@ -209,10 +128,9 @@ header::before {
         font-size: 1rem;
         margin-bottom: 2rem;
     }
-    .company {
+    .company {  
         text-align: center;
-        padding: 0 5rem;
-        box-sizing: border-box;
+        flex-direction: column;
     }
     .company .queries {
         padding-left: 1rem;

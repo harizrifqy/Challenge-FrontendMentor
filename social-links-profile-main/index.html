@@ -9,17 +9,74 @@
 
         :root {
             --btn-hover:  hsl(75, 94%, 57%);
-            --card-and-btn: hsl(0, 0%, 20%);
+            --card: hsl(0, 0%, 12%);
+            --btn: hsl(0, 0%, 20%);
             --bg: hsl(0, 0%, 8%);
         }
         * {
             padding: 0;
             margin: 0;
         }
-        .body{
-            max-width: 1440px;
+        body{
             font-family: 'Inter', Arial, sans-serif;
             font-size: 14px;
+            background-color: var(--bg);
+            color: white;
+        }
+        .container {
+            max-width: 1440px;
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            margin: 100px auto;
+        }
+        .card{
+            background-color: var(--card);
+            width: 320px;
+            height: 510px;
+            border-radius: 10px;
+            padding: 2rem;
+            box-sizing: border-box;
+        }
+        .card .content img {
+            width: 70px;
+            border-radius: 2.5rem;
+            margin-bottom: 20px;
+        }
+        .card .content .name {
+            font-size: 1.3rem;
+            padding-bottom: 0.5rem;
+        }
+        .card .content .from {
+            color: var(--btn-hover);
+            font-size: 0.8rem;
+            padding-bottom: 1.6rem;
+        }
+        .card .content .role {
+            color: rgb(168, 168, 168);
+            font-size: 0.78rem;
+            padding-bottom: 1.3rem;
+        }
+        .card .btn {
+            display: flex;
+            flex-direction: column;
+            row-gap: 14px;
+        }
+        .github-btn, .fm-btn,
+        .linkedin-btn, .twitter-btn,
+        .instagram-btn {
+            background-color: var(--btn);
+            padding: 11px;
+            border: none;
+            color: white;
+            border-radius: 8px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: 0.3s ease;
+        }
+        button:hover {
+            color: black;
+            background-color: var(--btn-hover);
         }
     </style>
 </head>
@@ -30,13 +87,13 @@
                 <img src="assets\images\avatar-jessica.jpeg" alt="">
                 <h3 class="name">Jessica Randall</h3>
                 <p class="from">London, United Kingdom</p>
-                <p>"Front-end developer and avid reader."</p>
+                <p class="role">"Front-end developer and avid reader."</p>
             </div>
             <div class="btn">
                 <button class="github-btn">GitHub</button>
                 <button class="fm-btn">Frontend Mentor</button>
                 <button class="linkedin-btn">LinkedIn</button>
-                <button class="twitter btn">Twitter</button>
+                <button class="twitter-btn">Twitter</button>
                 <button class="instagram-btn">Instagram</button>
             </div>
         </div>

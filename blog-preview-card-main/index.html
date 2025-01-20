@@ -28,17 +28,23 @@
         }
 
         .card {
-            max-width: 260px;
+            max-width: 290px;
             border: 1px solid hsl(0, 0%, 7%);
-            border-radius: 10px;
+            border-radius: 16px;
             padding: 20px;
             overflow: hidden;
             background-color: white;
-            box-shadow: 8px 8px 2px rgba(0,0,0,0.9);
+            box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.5); 
+            transition: box-shadow 0.3s ease, transform 0.3s ease;
+        }
+
+        .card:hover {
+            box-shadow: 8px 8px 0 rgba(0, 0, 0, 0.9); /* Shadow saat hover */
+            transform: translateY(-5px); /* Memberikan efek melayang */
         }
 
         .card .header img {
-            width: 260px;
+            width: 290px;
             border-radius: 10px;
         }
 
@@ -56,13 +62,16 @@
         }
 
         .content h4 {
+            font-size: 15px;
             font-weight: 400;
             margin-top: 10px;
             margin-bottom: 15px;
         }
 
         .content h3 {
+            font-size: 20px;
             margin-bottom: 15px;
+            font-weight: 800;
             transition: color 0.3s ease;
             cursor: pointer;
         }
@@ -81,11 +90,12 @@
         }
 
         .profile img {
-            width: 40px;
-            margin-right: 13px;
+            width: 28px;
+            margin-right: 10px;
         }
 
         .profile p {
+            font-size: 13px;
             font-weight: 800;
         }
     </style>

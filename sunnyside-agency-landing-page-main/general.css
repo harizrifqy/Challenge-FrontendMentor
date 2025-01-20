@@ -3,6 +3,7 @@
 
 :root {
     --footer:hsl(168, 34%, 41%);
+    --p: hsl(232, 10%, 55%);
 }
 
     * {
@@ -13,11 +14,17 @@
     border: none;
     text-decoration: none;
     }
-
+    
+    h1, h2, h3, h4 {
+        font-family: 'Fraunces', serif;
+    }
     body {
-    font-family: 'Barlow', Fraunces;
-    min-width: 1440px;
+    font-family: 'Barlow', sans-serif;
+    max-width: 1440px;
+    margin: 0 auto;
     line-height: 1.5em;
     font-size: 18px;
     height: 2000px;
     }
+    
+    

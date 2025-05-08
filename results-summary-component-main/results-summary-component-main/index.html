@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <title>Frontend Mentor | Results summary component</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="app.css">
+</head>
+<body>
+  <section class="panel result-summary">
+    <article class="main summary-plan">
+      <h3 class="result-header">Your Result</h3>
+      <p class="average-result">76 <span class="max-of-result">of 100</span></p>
+      <h2 class="title-message">Great</h2>
+      <p class="message">You scored higher than 65% of the people who have taken these tests.</p>
+    </article>
+    
+    <!-- <section class="summary">
+      <h2 class="summary-header">Summary</h2>
+      <article class="icon-reaction">
+        <img src="assets/images/icon-reaction.svg" alt="" class="icon">
+        Reaction <span>80</span> / 100
+      </article>
+
+      <article class="icon-memory">
+        <img src="assets/images/icon-memory.svg" alt="" class="icon">
+        Memory <span>92</span> / 100
+      </article>
+
+      <article class="icon-visual">
+        <img src="assets/images/icon-visual.svg" alt="" class="icon">
+        Visual <span>73</span> / 100
+      </article>
+
+      <article class="icon-verbal">
+        <img src="assets/images/icon-verbal.svg" alt="" class="icon">
+        Verbal <span>61</span> / 100
+      </article>
+    </section> -->
+
+
+    <section class="summary">
+      <h2 class="summary-header">Summary</h2>
+    
+      <article class="summary-item icon-reaction">
+        <div class="summary-left">
+          <img src="assets/images/icon-reaction.svg" alt="Reaction Icon" class="icon" />
+          <p class="title">Reaction</p>
+        </div>
+        <div class="summary-score">
+          <strong>80</strong> <span>/ 100</span>
+        </div>
+      </article>
+    
+      <article class="summary-item icon-memory">
+        <div class="summary-left">
+          <img src="assets/images/icon-memory.svg" alt="Memory Icon" class="icon" />
+          <p class="title">Memory</p>
+        </div>
+        <div class="summary-score">
+          <strong>92</strong> <span>/ 100</span>
+        </div>
+      </article>
+
+      <article class="summary-item icon-verbal">
+        <div class="summary-left">
+          <img src="assets/images/icon-verbal.svg" alt="Memory Icon" class="icon" />
+          <p class="title">Verbal</p>
+        </div>
+        <div class="summary-score">
+          <strong>61</strong> <span>/ 100</span>
+        </div>
+      </article>
+
+      <article class="summary-item icon-visual">
+        <div class="summary-left">
+          <img src="assets/images/icon-visual.svg" alt="Memory Icon" class="icon" />
+          <p class="title">Visual</p>
+        </div>
+        <div class="summary-score">
+          <strong>73</strong> <span>/ 100</span>
+        </div>
+      </article>
+      <button class="btn-continue">Continue</button>
+    
+      <!-- Tambah verbal dan visual dengan struktur yang sama -->
+    </section>
+    
+  </section>
+    
+  <!-- <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Hariz Rifqy</a>.
+  </div> -->
+</body>
+</html>

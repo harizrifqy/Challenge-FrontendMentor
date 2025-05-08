@@ -1,45 +1,132 @@
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
 }
+
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
 }
+
 body {
-	line-height: 1;
+    line-height: 1;
 }
-ol, ul {
-	list-style: none;
+
+ol,
+ul {
+    list-style: none;
 }
-blockquote, q {
-	quotes: none;
+
+blockquote,
+q {
+    quotes: none;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
 }
+
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+    border-collapse: collapse;
+    border-spacing: 0;
 }
 
 
@@ -48,6 +135,7 @@ html {
     font-family: 'Hanken Grotesk', sans-serif;
     font-size: 1.125rem;
 }
+
 body {
     background-color: hsl(221, 100%, 96%);
     display: flex;
@@ -55,29 +143,31 @@ body {
     align-items: center;
     min-height: 100vh;
 }
+
 .panel {
     background-color: white;
-    border-radius: 26px;
     width: 100%;
     max-width: 600px;
-    height: 405px;
     display: flex;
+    flex-direction: column;
 }
+
 .main {
     background: linear-gradient(to bottom, hsl(252, 95%, 63%), hsl(241, 81%, 54%));
-    width: 100%;
-    max-width: 250px;
-    border-radius: 26px;
+    flex: 1;
+    border-radius: 0 0 26px 26px;
     padding: 1.5rem;
     text-align: center;
     color: hsl(241, 100%, 89%);
 }
+
 .result-header {
     color: hsl(241, 100%, 89%);
     margin-bottom: 2rem;
     font-size: 1.2rem;
     font-weight: 500;
 }
+
 .average-result {
     color: white;
     font-size: 3.3rem;
@@ -87,44 +177,49 @@ body {
     padding: 2rem 0;
     width: 100%;
     max-width: 160px;
-    background: linear-gradient(to bottom,  rgb(73, 27, 202), hsla(241, 81%, 54%, 0.087));
+    background: linear-gradient(to bottom, rgb(73, 27, 202), hsla(241, 81%, 54%, 0.087));
     display: flex;
     flex-direction: column;
     margin: 0 auto 1.4rem auto;
 }
+
 .max-of-result {
     font-size: 0.87rem;
     color: hsla(241, 100%, 89%, 0.452);
     margin-top: 0.4rem;
 }
+
 .title-message {
     font-size: 1.4rem;
     color: white;
     font-weight: 600;
     margin-bottom: 1rem;
 }
+
 .message {
     font-size: 0.9rem;
     max-width: 220px;
     margin: 0 auto 1.4rem auto;
 }
+
 .summary {
-    width: 100%;
-    max-width: 250px;
-    border-radius: 26px;
+    flex: 1;
     padding: 1.5rem;
     display: flex;
     flex-direction: column;
     gap: 0.8rem;
 }
+
 .summary-header {
     font-size: 1.2rem;
     font-weight: 700;
     margin-bottom: 1rem;
 }
+
 .icon {
     width: 1.2rem;
 }
+
 .summary-item {
     display: flex;
     justify-content: space-between;
@@ -139,42 +234,46 @@ body {
     gap: 0.5rem;
     font-weight: 600;
 }
+
 .summary-score strong {
     font-weight: 700;
     color: black;
 }
+
+.icon-reaction,
+.icon-memory,
+.icon-visual,
+.icon-verbal {
+    padding: 0.6rem;
+    border-radius: 8px;
+    font-size: 0.9rem;
+}
+
 .icon-reaction {
     background-color: hsla(0, 100%, 67%, 0.053);
     color: hsl(0, 100%, 67%);
-    padding: 0.6rem;
-    border-radius: 8px;
-    font-size: 0.9rem;
 }
+
 .icon-memory {
     background-color: hsla(39, 100%, 56%, 0.064);
     color: hsl(39, 100%, 56%);
-    padding: 0.6rem;
-    border-radius: 8px;
-    font-size: 0.9rem;
 }
+
 .icon-visual {
     background-color: hsla(234, 85%, 45%, 0.048);
     color: hsl(234, 85%, 45%);
-    padding: 0.6rem;
-    border-radius: 8px;
-    font-size: 0.9rem;
 }
+
 .icon-verbal {
     background-color: hsla(166, 100%, 37%, 0.059);
     color: hsl(166, 100%, 37%);
-    padding: 0.6rem;
-    border-radius: 8px;
-    font-size: 0.9rem;
 }
+
 span {
     font-weight: 500;
     color: hsl(240, 5%, 71%);
 }
+
 .btn-continue {
     background-color: hsl(224, 30%, 27%);
     color: white;
@@ -185,7 +284,39 @@ span {
     cursor: pointer;
     font-size: 0.8rem;
 }
+
 .btn-continue:hover {
-    background: linear-gradient(to bottom,  hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+    background: linear-gradient(to bottom, hsl(252, 100%, 67%), hsl(241, 81%, 54%));
 }
 
+
+
+@media (min-width: 375px) and (max-width: 600px) {
+    .panel {
+        border-radius: 0;
+    }
+
+    .main {
+        border-radius: 0 0 26px 26px;
+    }
+}
+
+@media (min-width: 601px) and (max-width: 1024px) {
+    .panel {
+        max-width: 1024px;
+    }
+
+    .main {
+        border-radius: 0 0 26px 26px;
+    }
+}
+@media (min-width: 1025px) {
+    .panel {
+        flex-direction: row;
+        border-radius: 26px;
+    }
+
+    .main {
+        border-radius: 26px;
+    }
+}

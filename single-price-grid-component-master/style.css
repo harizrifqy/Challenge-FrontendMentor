@@ -1,0 +1,185 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+:root {
+    --primary-cyan: hsl(179, 62%, 43%);
+    --primary-bright-yellow: hsl(71, 73%, 54%);
+    --natural-light-gray: hsl(204, 43%, 93%);
+    --natural-grayish-blue: hsl(218, 22%, 67%);
+}
+html {
+    box-sizing: border-box;
+    font-family: 'Karla', sans-serif;
+    font-size: 1.125rem;
+}
+body {
+    line-height: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    box-sizing: border-box;
+    min-height: 100vh;
+    background-color: hsl(204, 43%, 93%);
+}
+.container {
+    max-width: 960px;
+    background-color: white;
+    border-radius: 6px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+}
+.main-header {
+    max-width: 630px;
+    padding: 2rem 2rem 1rem;
+    box-sizing: border-box;
+}
+.heading {
+    color: var(--primary-cyan);
+    font-size: 1.5rem;
+    margin-bottom: 1.6rem;
+}
+.highlight {
+    color: var(--primary-bright-yellow);
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+.description {
+    font-size: 0.9rem;
+    color: var(--natural-grayish-blue);
+    line-height: 1.4;
+    margin-bottom: 1.8rem;
+}
+.content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 630px;
+    border-radius: 0 0 6px 6px;
+}
+.subscription-box{
+    flex: 1;
+    padding: 2.5rem 2rem;
+    box-sizing: border-box;
+    background-color: var(--primary-cyan);
+}
+.title {
+    font-size: 1rem;
+    color: white;
+    margin-bottom: 1.3rem;
+}
+.price {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+.amount{
+    font-size: 1.8rem;
+    color: white;
+}
+.per-month {
+    font-size: 0.9rem;
+    color: rgba(216, 214, 214, 0.767);
+}
+.subscription_access {
+    color:var(--natural-light-gray);
+    font-size: 0.85rem;
+    margin-top: 0.6rem;
+}
+.btn-signup {
+    background-color: var(--primary-bright-yellow);
+    color: white;
+    border: none;
+    font-size: 0.9rem;
+    padding: 0.75rem 4.8rem;
+    box-sizing: border-box;
+    border-radius: 6px;
+    margin-top: 1.65rem;
+    cursor: pointer;
+    box-shadow: 6px 6px 8px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; 
+}
+.btn-signup:hover {
+    background-color: hsla(71, 85%, 65%, 0.886); 
+    color: white;
+    box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.5); 
+}
+
+.benefits-box {
+    flex: 1;
+    padding: 2.5rem 2rem;
+    box-sizing: border-box;
+    background-color: hsl(179, 64%, 47%);
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+}
+.benefit.for-subs {
+    font-size: 0.8rem;
+    line-height: 1.4;
+    color: var(--natural-light-gray);
+}
+
+
+
+@media (min-width: 375px) and (max-width: 600px) {
+    .body {
+        max-width: 100vh;
+    }
+    .content {
+        flex-wrap: wrap;
+    }
+}
+
+@media (min-width: 601px) {
+    .content {
+        flex-direction: row;
+    }
+    .subscription-box {
+        border-bottom-left-radius: 6px;
+    }
+    .benefits-box {
+        border-bottom-right-radius: 6px;
+        border-bottom-left-radius: 0;
+    }
+}

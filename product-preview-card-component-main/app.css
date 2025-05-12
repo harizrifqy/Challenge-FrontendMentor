@@ -1,0 +1,194 @@
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+
+:root {
+    --primary-green-500: hsl(158, 36%, 37%);
+    --primary-green-700: hsl(158, 42%, 18%);
+}
+html {
+    box-sizing: border-box;
+    font-size: 0.875rem; /* setara dengan 14px */
+}
+body {
+    background-color: hsl(30, 38%, 92%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: 'Montserrat', sans-serif; /* Font default untuk konten */
+    font-weight: 500;
+}
+h1, h2, h3, .special-text {
+    font-family: 'Fraunces', sans-serif; 
+}
+.container {
+    background-color: white;
+    width: 100%;
+    max-width: 600px;
+    display: flex;
+    border-radius: 8px;
+}
+.left-section {
+    flex: 1;
+}
+.img.parfume {
+    width: 100%;
+    max-width: 600px;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    display: block;
+    object-fit: cover;
+}
+
+
+.right-section {
+    flex: 1;
+}
+.header-section {
+    padding: 2rem 2rem 1rem;
+    box-sizing: border-box;
+}
+.heading {
+    color: grey;
+    text-transform: uppercase;
+    letter-spacing: 0.3rem;
+}
+.brand.parfume {
+    font-size: 2.4rem;
+    font-weight: 700;
+    margin: 1.8rem 0;
+    max-width: 16rem;
+    box-sizing: border-box;
+}
+.description.parfume {
+    font-size: 1rem;
+    color: grey;
+    max-width: 16rem;
+    line-height: 1.4;
+}
+.price.parfume {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0 2rem 1.4rem;
+    box-sizing: border-box;
+    margin: 1.4rem 0 0.7rem;
+}
+.diskon-price {
+    color: var(--primary-green-500);
+    font-size: 2.4rem;
+    font-weight: 700;
+}
+.normal-price {
+    color: grey;
+    font-size: 1rem;
+}
+.checkout {
+    padding: 0 2rem;
+    box-sizing: border-box;
+}
+.btn-add {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    background-color: var(--primary-green-500);
+    color: white;
+    font-size: 1rem;
+    border: none;
+    padding: 1rem 5rem;
+    border-radius: 7px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+.btn-add:hover {
+    background-color: var(--primary-green-700);
+    transform: scale(1.02);
+}
+
+
+@media (min-width: 375px) and (max-width: 576px) {
+    .container {
+        max-width: 340px;
+        min-height: 660px;
+        flex-direction: column;
+        border-radius: 6px;
+        margin: 2rem 1rem;
+    }
+    .img.parfume {
+        aspect-ratio: 4 / 3;
+        border-bottom-left-radius: 0;
+        border-top-right-radius: 8px;
+    }
+    .left-section {
+        flex: 1;
+    }
+    .right-section {
+        flex: 2;
+    }
+    .header-section {
+    padding: 1.3rem 2rem 1rem;
+    box-sizing: border-box;
+    }
+    .btn-add {
+        padding: 1rem 6.6rem;
+        box-sizing: border-box;
+    }
+    .brand.parfume {
+        font-size: 2.2rem;
+        max-width: 20rem;
+    }
+    .description.parfume {
+        max-width: 20rem;
+    }
+    .price.parfume {
+        margin: 0.8rem 0 0.7rem;
+    }
+}
+
+
+

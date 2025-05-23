@@ -1,0 +1,362 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+
+:root {
+  /* colors primary*/
+  --primari-Purple-50: hsl(260, 100%, 95%);
+  --primari-Purple-300: hsl(264, 82%, 80%);
+  --primaryPurple-500: hsl(263, 55%, 52%);
+
+  /* colors natural */
+  --White: hsl(0, 0%, 100%);
+  --Grey-100: hsl(214, 17%, 92%);
+  --Grey-200: hsl(0, 0%, 81%);
+  --Grey-400: hsl(224, 10%, 45%);
+  --Grey-500: hsl(217, 19%, 35%);
+  --Dark-blue: hsl(219, 29%, 14%);
+  --Black: hsl(0, 0%, 7%);
+
+  /* Font size scale */
+  --fs-sm: clamp(0.875rem, 1vw, 1rem);
+  /* 14px - 16px */
+  --fs-base: clamp(1rem, 1.2vw, 1.125rem);
+  /* 16px - 18px */
+  --fs-md: clamp(1.25rem, 2vw, 1.6rem);
+  /* 20px - 25.6px */
+  --fs-lg: clamp(1.75rem, 3vw, 2.25rem);
+  /* 24px - 36px */
+  --fs-xl: clamp(2rem, 4vw, 3rem);
+  /* 32px - 48px */
+
+  /* Spacing scale (margin/padding/gap) */
+  --space-xs: clamp(0.5rem, 0.8vw, 1rem);
+  --space-sm: clamp(1rem, 1.2vw, 1.5rem);
+  --space-md: clamp(1.5rem, 2vw, 2rem);
+  --space-lg: clamp(2rem, 3vw, 3rem);
+
+  /* Container widths */
+  --max-container: 1200px;
+  --max-container-wide: 1440px;
+}
+
+
+html,
+body {
+  font-family: Barlow Semi Condensed, Arial, sans-serif;
+  box-sizing: border-box;
+  line-height: 1.5;
+}
+
+body {
+  background-color: var(--Grey-100);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 5rem 2rem;
+  min-height: 100vh;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+
+/* Pembungkus */
+.panel {
+  max-width: var(--max-container-wide);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-areas:
+    'daniel daniel jonathan kira'
+    'jeanette patrick patrick kira';
+  gap: var(--space-sm);
+  padding: var(--space-xs);
+}
+
+
+.profile-daniel,
+.profile-jonathan,
+.profile-kira,
+.profile-jeanette,
+.profile-patrick {
+  padding: var(--space-md);
+  border-radius: 0.75rem;
+}
+
+.profile-daniel {
+  grid-area: daniel;
+  background-color: var(--primaryPurple-500);
+}
+
+.profile-jonathan {
+  grid-area: jonathan;
+  background-color: var(--Grey-500);
+}
+
+.profile-kira {
+  grid-area: kira;
+  background-color: var(--White);
+}
+
+.profile-jeanette {
+  grid-area: jeanette;
+  background-color: var(--White);
+}
+
+.profile-patrick {
+  grid-area: patrick;
+  background-color: var(--Black);
+}
+
+.profile {
+  display: grid;
+  grid-template-columns: 3.125rem 6.25rem;
+  white-space: nowrap;
+  gap: var(--space-xs);
+}
+
+.profile img {
+  border-radius: 100%;
+  max-width: 3rem;
+  border: 2px solid var(--White);
+  margin-bottom: 1rem;
+}
+
+.actor>.name-actor {
+  color: var(--White);
+  font-size: var(--fs-base);
+}
+
+.actor>span,
+.actor-bg-white>span {
+  color: var(--Grey-200);
+}
+
+.actor-bg-white>.name-actor {
+  color: var(--Black);
+  font-size: var(--fs-base);
+}
+
+.title,
+.testimonial.bg-white>.title {
+  color: var(--White);
+  font-size: var(--fs-md);
+  font-weight: 600;
+  margin-bottom: 1.75rem;
+}
+
+.testimonial.bg-white>.title {
+  color: var(--Black);
+  width: 93%;
+}
+
+.testimonial.bg-white>.comment {
+  color: var(--Grey-400);
+  font-size: var(--fs-base);
+}
+
+.comment {
+  color: var(--Grey-200);
+  font-size: var(--fs-base);
+}
+
+/* footer */
+.attribution { 
+  font-size: var(--fs-md); 
+  text-align: center; 
+  margin-top: 5rem;
+}
+.attribution a { color: hsl(228, 45%, 44%); }
+
+
+
+@media (max-width: 576px) {
+  .panel {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas:
+      'daniel'
+      'daniel'
+      'jonathan'
+      'jeanette'
+      'patrick'
+      'patrick'
+      'kira'
+      'kira';
+  }
+
+  .testimonial.bg-white>.title {
+    color: var(--Black);
+    width: 90%;
+  }
+}
+
+@media (min-width: 577px) and (max-width:767px) {
+  .panel {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+    'daniel daniel'
+    'jonathan kira'
+    'jeanette kira'
+    'patrick patrick'
+}
+  .testimonial.bg-white>.title {
+    color: var(--Black);
+    width: 100%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .panel {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, minmax(100px, auto));
+    grid-template-areas:
+      'daniel daniel kira'
+      'jonathan jeanette kira'
+      'patrick patrick patrick';
+  }
+  .testimonial.bg-white>.title {
+    color: var(--Black);
+    width: 100%;
+  }
+}
+

@@ -31,27 +31,30 @@
 
     <main class="main-content">
       <section class="main-features">
-        <div>
+        <div class="info-features">
           <h3 class="title main-content">Keep track of your snippets</h3>
           <p class="description">Clipboard instantly stores any item you copy in the cloud, 
             meaning you can access your snippets immediately on all your 
             devices. Our Mac and iOS apps will help you organize everything.</p>
         </div>
+        <div class="image-computer-container">
+          <img src="images/image-computer.png" alt="Image Mac">
+        </div>
         <section class="features">
           <!-- Fitur Satu -->
           <article class="features-satu">
             <h4 class="title-features">Quick Search</h4>
-            <span class="info-features">Easily search your snippets by content, category, web address, application, and more.</span>
+            <span class="description-features">Easily search your snippets by content, category, web address, application, and more.</span>
           </article>
           <!-- Fitur Dua -->
           <article class="features-dua">
             <h4 class="title-features">iCloud Sync</h4>
-            <span class="info-features">Instantly saves and syncs snippets across all your devices.</span>
+            <span class="description-features">Instantly saves and syncs snippets across all your devices.</span>
           </article>
           <article class="features-tiga">
             <!-- Fitur Tiga -->
             <h4 class="title-features">Complete History</h4>
-            <span class="info-features">Retrieve any snippets from the first moment you started using the app.</span>
+            <span class="description-features">Retrieve any snippets from the first moment you started using the app.</span>
           </article>
         </section>
       </section>
@@ -59,7 +62,7 @@
       <!-- Access Clipboard Anyware -->
       <section class="access-clipboard">
         <h4 class="title access-clipboard">Access Clipboard anywhere</h4>
-        <span class="info-features">Whether you’re on the go, or at your computer, you can access all your Clipboard 
+        <span class="description">Whether you’re on the go, or at your computer, you can access all your Clipboard 
         snippets in a few simple clicks.</span>
         <img src="images/image-devices.png" alt="Image Device Access Clipboard">
       </section>
@@ -69,17 +72,29 @@
         <p class="description">We’ve got the tools to boost your productivity.</p>
         <article class="tools">
           <!-- Tools Pertama -->
-          <img src="images/icon-blacklist.svg" alt="">
-          <span class="title-features">Create blacklists</span>
-          <p class="description-features">Ensure sensitive information never makes its way to your clipboard by excluding certain sources.</p>
+          <div class="features-supercharger-container">
+            <div>
+              <img src="images/icon-blacklist.svg" alt="">
+              <span class="title-features">Create blacklists</span>
+              <p class="description-features">Ensure sensitive information never makes its way to your clipboard by excluding certain sources.</p>
+            </div>
+          </div>
           <!-- Tools kedua -->
-          <img src="images/icon-text.svg" alt="">
-          <span class="title-features">Plain text snippets</span>
-          <p class="description-features">Remove unwanted formatting from copied text for a consistent look.</p>
-          <!-- Tools Ketiga -->
-          <img src="images/icon-preview.svg" alt="">
-          <span class="title-features">Sneak preview</span>
-          <p class="description-features">Quick preview of all snippets on your Clipboard for easy access.</p>
+          <div class="features-supercharger-container">
+            <div>
+            <img src="images/icon-text.svg" alt="">
+              <span class="title-features">Plain text snippets</span>
+              <p class="description-features">Remove unwanted formatting from copied text for a consistent look.</p>
+            </div>
+          </div>
+          <div class="features-supercharger-container">
+            <!-- Tools Ketiga -->
+            <div>
+              <img src="images/icon-preview.svg" alt="">
+              <span class="title-features">Sneak preview</span>
+              <p class="description-features">Quick preview of all snippets on your Clipboard for easy access.</p>
+            </div>
+          </div>
         </article>
         <!-- Company yang percaya dengan tools company saya -->
         <article class="trusted">
@@ -102,18 +117,24 @@
     </section>
     </main>
 
-    <footer>
-      <img src="images/logo.svg" alt="image logo my company">
-      <ul>
-        <li>FaQs</li>
-        <li>Contact Us</li>
-        <li>Privacy Policy</li>
-        <li>Press Kit</li>
-        <li>Install Guide</li>
-      </ul>
-      <img src="images/icon-facebook.svg" alt="Links to my Facebook">
-      <img src="images/icon-twitter.svg" alt="Links to my Twitter">
-      <img src="images/icon-instagram.svg" alt="Links to my Instagram">
+    <footer class="footer">
+      <img class="img-logo" src="images/logo.svg" alt="image logo my company">
+      <div class="footer-links">
+        <ul>
+          <li>FaQs</li>
+          <li>Contact Us</li>
+          <li>Install Guide</li>
+        </ul>
+        <ul>
+          <li>Privacy Policy</li>
+          <li>Press Kit</li>
+        </ul>
+      </div>
+      <div class="sosial-media">
+        <img class="icon fb" src="images/icon-facebook.svg" alt="Links to my Facebook"></img>
+        <img class="icon twitter" src="images/icon-twitter.svg" alt="Links to my Twitter"></img>
+        <img class="icon ig" src="images/icon-instagram.svg" alt="Links to my Instagram"></img>
+      </div>
     </footer>
   </div>
 </body>

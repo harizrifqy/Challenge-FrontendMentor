@@ -68,10 +68,23 @@ table {
     --max-container-wide: 1440px;
 }
 
+
+html, body {
+  font-family: 'Montserrat', Arial;
+  box-sizing: border-box;
+  line-height: 1.5;
+}
 body {
   min-height: 100vh;
   font-size: 1.125rem;
+  background: url('images/bg-header-desktop.png') no-repeat top;
 }
 
-.attribution { font-size: 11px; text-align: center; }
-.attribution a { color: hsl(228, 45%, 44%); }
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+  max-width: var(--max-container-wide);
+}
+

@@ -25,6 +25,120 @@ h1, h2, h3 {
 }
 
 body {
+  min-height: 100vh;
   font-family: 'Lexend Deca', sans-serif;
   font-weight: 400;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapper {
+  width: clamp(37.5rem, 80vw, 50rem);
+  min-height: 25rem;
+  display: flex;
+  box-shadow: 8px 8px 10px rgba(0, 0, 0, 0.3);
+  border-radius: 0.5rem;
+}
+
+.card.satu{
+  padding: 2.5rem;
+  background-color: var(--primary-Bright-orange);
+  color: var(--Transparent-white);
+  border-top-left-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+}
+
+.jenis-mobil {
+  text-transform: uppercase;
+  font-size: 2rem;
+  margin: 1rem 0;
+  color: var(--Very-light-gray);
+}
+
+.description-mobil {
+  margin-bottom: 4rem;
+  font-size: 0.85rem;
+}
+
+.btn-learn-more {
+  border: 2px solid var(--Very-light-gray);
+  padding: 0.75rem 2rem;
+  border-radius: 1.5rem;
+  color: var(--Transparent-white);
+  cursor: pointer;
+}
+
+.card.satu .btn-learn-more {
+  color: var(--primary-Bright-orange);
+  transition: background-color 0.3s ease;
+}
+
+.card.satu .btn-learn-more:hover {
+  background-color: var(--primary-Bright-orange);
+  color: var(--Very-light-gray);
+}
+
+.card.dua{
+  padding: 2.5rem;
+  background-color: var(--primary-Dark-cyan);
+  color: var(--Transparent-white);
+}
+
+.card.dua .btn-learn-more {
+  color: var(--primary-Dark-cyan);
+  transition: background-color 0.3s ease;
+}
+
+.card.dua .btn-learn-more:hover {
+  background-color: var(--primary-Dark-cyan);
+  color: var(--Very-light-gray);
+}
+
+.card.tiga{
+  padding: 2.5rem;
+  background-color: var(--primary-Very-dark-cyan);
+  color: var(--Transparent-white);
+  border-top-right-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+}
+
+.card.tiga .btn-learn-more {
+  color: var(--primary-Very-dark-cyan);
+  transition: background-color 0.3s ease;
+}
+
+.card.tiga .btn-learn-more:hover {
+  color: var(--Very-light-gray);
+  background-color: var(--primary-Very-dark-cyan);
+}
+
+
+@media (max-width: 576px) {
+  body {
+    flex-direction: column;
+    padding: 4rem 0;
+  }
+
+  .wrapper {
+    width: clamp(18.75rem, 60vw, 25rem);
+    flex-direction: column;  
+  }
+
+  .card.satu{
+    border-top-right-radius: 0.5rem;
+    border-bottom-left-radius: 0;
+  }
+
+  .card.tiga{
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+  }
+
+  .description-mobil {
+  margin-bottom: 1rem;
+  font-size: 0.85rem;
+  }
 }

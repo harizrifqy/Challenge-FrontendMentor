@@ -1,0 +1,30 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* Colors */
+  --primary-Bright-orange: hsl(31, 77%, 52%);
+  --primary-Dark-cyan: hsl(184, 100%, 22%);
+  --primary-Very-dark-cyan: hsl(179, 100%, 13%);
+
+  --Transparent-white: hsla(0, 0%, 100%, 0.75);
+  --Very-light-gray: hsl(0, 0%, 95%);
+}
+
+
+html, body {
+  line-height: 1.5;
+}
+
+h1, h2, h3 {
+  font-family: 'Big Shoulders', sans-serif;
+  font-weight: 700;
+}
+
+body {
+  font-family: 'Lexend Deca', sans-serif;
+  font-weight: 400;
+}

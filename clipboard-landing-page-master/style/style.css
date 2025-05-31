@@ -1,46 +1,132 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
-}
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
 }
+
 body {
-	line-height: 1;
+  line-height: 1;
 }
-ol, ul {
-	list-style: none;
+
+ol,
+ul {
+  list-style: none;
 }
-blockquote, q {
-	quotes: none;
+
+blockquote,
+q {
+  quotes: none;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
 }
+
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
 :root {
@@ -51,11 +137,16 @@ table {
   --Gray-500: hsl(201, 11%, 66%);
 
   /* Font size scale */
-  --fs-sm: clamp(0.875rem, 1vw, 1rem);  /* 14px - 16px */
-  --fs-base: clamp(1rem, 1.2vw, 1.125rem);  /* 16px - 18px */
-  --fs-md: clamp(1.25rem, 2vw, 1.5rem);  /* 20px - 24px */
-  --fs-lg: clamp(1.5rem, 3vw, 2.25rem);  /* 24px - 36px */
-  --fs-xl: clamp(2rem, 4vw, 3rem);  /* 32px - 48px */
+  --fs-sm: clamp(0.8rem, 1vw, 1rem);
+  /* 14px - 16px */
+  --fs-base: clamp(1rem, 1.2vw, 1.125rem);
+  /* 16px - 18px */
+  --fs-md: clamp(1.25rem, 2vw, 1.5rem);
+  /* 20px - 24px */
+  --fs-lg: clamp(1.5rem, 3vw, 2.25rem);
+  /* 24px - 36px */
+  --fs-xl: clamp(2rem, 4vw, 3rem);
+  /* 32px - 48px */
 
   /* Spacing scale (margin/padding/gap) */
   --space-xs: clamp(0.5rem, 0.8vw, 0.75rem);
@@ -68,9 +159,82 @@ table {
   --max-container-wide: 1440px;
 }
 
-html, body {
+html,
+body {
   font-size: 18px;
   font-family: 'Bai Jamjuree', Arial;
   box-sizing: border-box;
 }
 
+body {
+  min-height: 100vh;
+  background: url('/images/bg-header-mobile.png') no-repeat top center;
+  background-size: contain;
+}
+
+.container {
+  max-width: var(--max-container-wide);
+}
+
+.logo-container {
+  display: flex;
+  justify-content: center;
+}
+
+.img-logo-company {
+  width: 5rem;
+  margin: 4rem 0 3rem;
+}
+
+.header-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: 0 1rem;
+  text-align: center;
+}
+
+.title.header {
+  font-size: var(--fs-lg);
+  font-weight: 600;
+}
+
+.description.header {
+  font-size: var(--fs-sm);
+  color: var(--Gray-500);
+  margin-bottom: 1.5rem;
+}
+
+.btn-for-ios,
+.btn-for-mac {
+  padding: 0.7rem;
+  border: none;
+  color: white;
+  border-radius: 1rem;
+  cursor: pointer;
+  transition: opacity 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-for-ios {
+  background-color: var(--primary-Green-500);
+}
+
+.btn-for-ios:hover {
+  opacity: 0.75;
+  box-shadow: 2px 4px 10px hsla(171, 66%, 44%, 0.808);
+}
+
+.btn-for-mac:active,
+.btn-for-ios:active {
+  opacity: 0.5;
+}
+
+.btn-for-mac {
+  background-color: var(--primary-Blue-100);
+  margin-bottom: 2rem;
+}
+
+.btn-for-mac:hover {
+  opacity: 0.75;
+  box-shadow: 2px 4px 10px hsla(233, 100%, 69%, 0.808);
+}

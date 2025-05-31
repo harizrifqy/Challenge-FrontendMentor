@@ -190,7 +190,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
-  padding: 0 1rem;
+  padding: 0 2rem;
   text-align: center;
 }
 
@@ -199,11 +199,6 @@ body {
   font-weight: 600;
 }
 
-.description.header {
-  font-size: var(--fs-sm);
-  color: var(--Gray-500);
-  margin-bottom: 1.5rem;
-}
 
 .btn-for-ios,
 .btn-for-mac {
@@ -231,10 +226,93 @@ body {
 
 .btn-for-mac {
   background-color: var(--primary-Blue-100);
-  margin-bottom: 2rem;
+  margin-bottom: 5rem;
 }
 
 .btn-for-mac:hover {
   opacity: 0.75;
   box-shadow: 2px 4px 10px hsla(233, 100%, 69%, 0.808);
+}
+
+
+
+/* Main Section */
+
+.main-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 0 2rem;
+  gap: 3rem;
+}
+
+
+.content .title {
+  font-size: var(--fs-md);
+  font-weight: 600;
+  max-width: 12rem;
+  margin: 0 auto 1.5rem;
+}
+
+.description.content,
+.description.supercharger,
+.description.device-support,
+.description.header {
+  color: var(--Gray-500);
+  font-size: var(--fs-sm);
+  margin-bottom: 2rem;
+}
+
+.img-computer-container img{
+  margin-bottom: 3rem;
+}
+
+.img-computer-container img,
+.img-devices-container img {
+  max-width: 300px;
+} 
+
+.features {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.title.features {
+  font-size: var(--fs-base);
+  font-weight: 600;
+}
+
+.info-features {
+  margin-bottom: 2rem;
+  color: var(--Gray-500);
+  font-size: var(--fs-sm);
+}
+
+.icons {
+  max-width: 2rem;
+  align-self: center;
+}
+
+.trusted-company {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.25rem;
+  margin: 3rem 0;
+}
+
+.trusted-company img {
+  max-width: 7rem;
+}
+
+.content.device-support {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.description.device-support {
+  margin-bottom: 2rem;
 }

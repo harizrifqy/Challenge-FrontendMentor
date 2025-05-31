@@ -316,3 +316,43 @@ body {
 .description.device-support {
   margin-bottom: 2rem;
 }
+
+
+/* Footer */
+
+.footer {
+  background-color: hsla(202, 11%, 66%, 0.402);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
+  padding: 2rem;
+}
+
+.img-logo-footer {
+  max-width: 2.5rem;
+}
+
+.footer-navigation ul a{
+  text-decoration: none;
+  color: var(--Gray-500);
+  font-size: var(--fs-sm);
+  margin: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.footer-navigation ul a:hover {
+  color: var(--primary-Green-500);
+}
+
+.sosialmedia-links {
+  width: clamp(100px, 150px, 200px);
+  display: flex;
+  justify-content: space-around;
+  transition: all 0.3s ease;
+}
+
+.sosialmedia-links svg:hover {
+  fill: aquamarine;
+}

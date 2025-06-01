@@ -1,0 +1,82 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+:root {
+  /* Colors */
+  --primary-Purple-100: hsl(254, 88%, 90%);
+  --primary-Purple-500: hsl(256, 67%, 59%);
+  --primary-Yellow-100: hsl(31, 66%, 93%);
+  --primary-Yellow-500: hsl(39, 100%, 71%);
+  --White: hsl(0, 0%, 100%);
+  --Black: hsl(0, 0%, 7%);
+
+  /* Font size scale */
+    --fs-sm: clamp(0.875rem, 1vw, 1rem);  /* 14px - 16px */
+    --fs-base: clamp(1rem, 1.2vw, 1.125rem);  /* 16px - 18px */
+    --fs-md: clamp(1.25rem, 2vw, 1.5rem);  /* 20px - 24px */
+    --fs-lg: clamp(1.5rem, 3vw, 2.25rem);  /* 24px - 36px */
+    --fs-xl: clamp(2rem, 4vw, 3rem);  /* 32px - 48px */
+
+    /* Spacing scale (margin/padding/gap) */
+    --space-xs: clamp(0.5rem, 0.8vw, 0.75rem);
+    --space-sm: clamp(1rem, 1.2vw, 1.25rem);
+    --space-md: clamp(1.5rem, 2vw, 2rem);
+    --space-lg: clamp(2rem, 3vw, 3rem);
+
+    /* Container widths */
+    --max-container: 1200px;
+    --max-container-wide: 1440px;
+}
+
+
+html,body {
+  font-family: 'DM Sans', Arial;
+  box-sizing: border-box;
+  line-height: 1.5;
+}
+
+body {
+  font-size: 18px;
+}

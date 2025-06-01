@@ -53,17 +53,28 @@ table {
   --Black: hsl(0, 0%, 7%);
 
   /* Font size scale */
-    --fs-sm: clamp(0.875rem, 1vw, 1rem);  /* 14px - 16px */
-    --fs-base: clamp(1rem, 1.2vw, 1.125rem);  /* 16px - 18px */
-    --fs-md: clamp(1.25rem, 2vw, 1.5rem);  /* 20px - 24px */
-    --fs-lg: clamp(1.5rem, 3vw, 2.25rem);  /* 24px - 36px */
-    --fs-xl: clamp(2rem, 4vw, 3rem);  /* 32px - 48px */
+  --fs-sm: clamp(0.875rem, 1vw, 1rem);  /* 14px - 16px */
+  --fs-base: clamp(1rem, 1.2vw, 1.125rem);  /* 16px - 18px */
+  --fs-md: clamp(1.25rem, 2vw, 1.5rem);  /* 20px - 24px */
+  --fs-lg: clamp(1.5rem, 3vw, 2.25rem);  /* 24px - 36px */
+  --fs-xl: clamp(2.5rem, 4vw, 3.25rem);  /* 40px - 52px */
+  --fs-2xl: clamp(2.75rem, 4vw, 3.75rem);  /* 44px - 56px*/
 
-    /* Spacing scale (margin/padding/gap) */
-    --space-xs: clamp(0.5rem, 0.8vw, 0.75rem);
-    --space-sm: clamp(1rem, 1.2vw, 1.25rem);
-    --space-md: clamp(1.5rem, 2vw, 2rem);
-    --space-lg: clamp(2rem, 3vw, 3rem);
+  /* Spacing scale (margin/padding/gap) */
+  --space-xs: clamp(0.5rem, 0.8vw, 0.75rem);
+  --space-sm: clamp(1rem, 1.2vw, 1.25rem);
+  --space-md: clamp(1.5rem, 2vw, 2rem);
+  --space-lg: clamp(2rem, 3vw, 3rem);
+  --space-xl: clamp(2.5rem, 4vw, 3.25rem);
+
+  /* Radius */
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 1rem;
+  
+  /* Shadows */
+  --shadow-card: 4px 4px 12px rgba(0, 0, 0, 0.3);
+  --shadow-card-hover: 8px 8px 24px rgba(0, 0, 0, 0.4);
 
     /* Container widths */
     --max-container: 1200px;
@@ -74,9 +85,273 @@ table {
 html,body {
   font-family: 'DM Sans', Arial;
   box-sizing: border-box;
-  line-height: 1.5;
+  line-height: 1.2;
 }
 
 body {
   font-size: 18px;
+  min-height: 100vh;
 }
+
+.container {
+  display: grid;
+  grid-template-columns: minmax(300px, 1fr);
+  grid-template-areas: 
+  'sosialmedia'
+  'manage-account'
+  'posting-schedule'
+  'schedule-sosmed'
+  'grow-followers'
+  'audience-growth'
+  'create-content'
+  'write-content';
+  gap: var(--space-md);
+  justify-content: center;
+  align-items: center;
+  padding: var(--space-lg) var(--space-sm);
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  padding: var(--space-md);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-card);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-card-hover);
+}
+
+
+/* Card Ke-1 */
+.card.sosialmedia {
+  grid-area: sosialmedia;
+  align-items: center;
+  background-color: var(--primary-Purple-500);
+  color: var(--White);
+  text-align: center;
+}
+
+.title.sosialmedia {
+  font-size: var(--fs-2xl);
+  line-height: 1;
+  max-width: 16rem;
+}
+
+.title.sosialmedia span {
+  color: var(--primary-Yellow-500);
+  font-weight: 500;
+}
+
+.img-star {
+  max-width: 11rem;
+  margin-top: var(--space-sm);
+  margin-bottom: var(--space-xs);
+}
+
+.star-reviews {
+  font-size: var(--fs-base);
+}
+
+
+/* Card ke-2 */
+
+.card.manage-account {
+  grid-area: manage-account;
+  background-color: var(--White);
+}
+
+.card.manage-account span {
+  font-weight: 500;
+  font-size: var(--fs-lg);
+}
+
+.img-multiple-platforms {
+  max-width: 20rem;
+  margin-top: auto;
+}
+
+
+/* Card ke-3 */
+.card.posting-schedule {
+  grid-area: posting-schedule;
+  background-color: var(--primary-Yellow-500);
+  padding: var(--space-md) var(--space-md) 0;
+  gap: var(--space-lg);
+  overflow: hidden;
+  position: relative;
+}
+
+.title.posting-schedule {
+  font-size: var(--fs-lg);
+  font-weight: 500;
+}
+
+.img-posting-schedule {
+  margin-top: auto;
+  max-width: 13rem;
+}
+
+
+/* Card ke-4 */
+.card.schedule-to-sosmed {
+  grid-area: schedule-sosmed;
+  background-color: var(--primary-Purple-100);
+  align-items: center;
+  gap: var(--space-md);
+  text-align: center;
+  font-weight: 500;
+}
+
+.title.schedule-to-sosmed {
+  font-size: var(--fs-lg);
+}
+
+.img-best-time-post {
+  max-width: 16rem;
+}
+
+
+/* Card ke-5 */
+.card.grow-followers {
+  grid-area: grow-followers;
+  align-items: center;
+  gap: var(--space-sm);
+  background-color: var(--primary-Purple-500);
+}
+
+.img-grow-followers {
+  max-width: 13rem;
+}
+
+.title.grow-followers {
+  font-size: var(--fs-lg);
+  font-weight: 500;
+  color: var(--White);
+  text-align: center;
+  max-width: 12rem;
+}
+
+
+/* Card ke-6 */
+.card.audience-growth {
+  grid-area: audience-growth;
+  background-color: var(--White);
+  gap: var(--space-xs);
+}
+
+.card.audience-growth span {
+  font-weight: 500;
+  font-size: var(--fs-xl);
+  color: var(--Black);
+}
+
+.title.audience-growth {
+  font-size: var(--fs-base);
+  margin-bottom: var(--space-sm);
+}
+
+.img-audience-growth {
+  max-width: 10rem;
+}
+
+
+/* Card ke-7 */
+.card.create-schedule-content {
+  grid-area: create-content;
+  background-color: var(--primary-Yellow-100);
+  gap: var(--space-md);
+}
+
+.title.create-content {
+  font-size: var(--fs-lg);
+  font-weight: 500;
+}
+
+.title.create-content span {
+  color: var(--primary-Purple-500);
+  font-style: italic;
+  font-weight: bold;
+}
+
+.img-create-content {
+  max-width: 12rem;
+}
+
+
+/* Card ke-8 */
+.card.write-your-content {
+  grid-area: write-content;
+  background-color: var(--primary-Yellow-500);
+  gap: var(--space-md);
+}
+
+.title.write-your-content {
+  font-size: var(--fs-lg);
+  font-weight: 500;
+  max-width: 14rem;
+} 
+
+.img-write-your-content {
+  max-width: 12rem;
+}
+
+
+
+@media (min-width: 600px) and (max-width: 768px) {
+  .container {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(200px, 1fr));
+    grid-template-rows: repeat(6, minmax(200px, auto));
+    grid-template-areas: 
+    'sosialmedia sosialmedia'
+    'manage-account schedule-sosmed'
+    'posting-schedule schedule-sosmed'
+    'grow-followers grow-followers'
+    'create-content audience-growth'
+    'create-content write-content';
+    gap: var(--space-md);
+    justify-content: center;
+    align-items: stretch;
+    padding: var(--space-lg) var(--space-sm);
+  }
+
+  .card.schedule-to-sosmed {
+    text-align: start;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .img-best-time-post {
+    min-width: 100%;
+    margin-left: 5rem;
+  }
+
+
+  .card.grow-followers {
+    flex-direction: row;
+  }
+
+  .title.grow-followers {
+    text-align: start;
+    font-size: var(--fs-xl);
+    max-width: 100%;
+  }
+
+  .img-posting-schedule {
+    max-width: 100%;
+  }
+
+  .title.create-content {
+    font-size: var(--fs-xl);
+    padding-top: var(--space-xl);
+  }
+
+  .title.sosialmedia {
+    max-width: 20rem;
+  }
+}
+

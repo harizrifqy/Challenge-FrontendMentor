@@ -168,7 +168,7 @@ body {
 
 body {
   min-height: 100vh;
-  background: url('./images/bg-header-mobile.png') no-repeat top center;
+  background: url('../images/bg-header-mobile.png') no-repeat top center;
   background-size: contain;
 }
 

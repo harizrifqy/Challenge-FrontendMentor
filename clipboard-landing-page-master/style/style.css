@@ -168,7 +168,7 @@ body {
 
 body {
   min-height: 100vh;
-  background: url('/images/bg-header-mobile.png') no-repeat top center;
+  background: url('./images/bg-header-mobile.png') no-repeat top center;
   background-size: contain;
 }
 
@@ -358,7 +358,7 @@ body {
 
 @media (min-width: 577px) and (max-width: 1024px) {
   body {
-  background: url('/images/bg-header-desktop.png') no-repeat top center;
+  background: url('./images/bg-header-desktop.png') no-repeat top center;
   background-size: contain;
   }
 
@@ -436,7 +436,7 @@ body {
 
 @media (min-width: 1025px) {
   body {
-  background: url('/images/bg-header-desktop.png') no-repeat top center;
+  background: url('./images/bg-header-desktop.png') no-repeat top center;
   background-size: contain;
   }
 

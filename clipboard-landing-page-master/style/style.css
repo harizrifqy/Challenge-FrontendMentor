@@ -135,6 +135,8 @@ table {
   --primary-Blue-100: hsl(233, 100%, 69%);
   --Gray-700: hsl(210, 10%, 33%);
   --Gray-500: hsl(201, 11%, 66%);
+  --btn-hover-green: hsl(171, 66%, 54%);
+  --btn-hover-blue: hsl(233, 100%, 75%);
 
   /* Font size scale */
   --fs-sm: clamp(0.8rem, 1vw, 1rem);
@@ -145,7 +147,7 @@ table {
   /* 20px - 24px */
   --fs-lg: clamp(1.5rem, 3vw, 2rem);
   /* 24px - 36px */
-  --fs-xl: clamp(2rem, 4vw, 3rem);
+  --fs-xl: clamp(2rem, 4vw, 2.75rem);
   /* 32px - 48px */
 
   /* Spacing scale (margin/padding/gap) */
@@ -180,7 +182,7 @@ body {
 
 .img-logo-company {
   width: 5rem;
-  margin: 4rem 0 3rem;
+  margin: 7rem 0 3rem;
 }
 
 .header-content {
@@ -200,6 +202,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
+  margin-bottom: 5rem;
 }
 
 .btn-for-ios,
@@ -214,13 +217,27 @@ body {
 
 .btn-for-ios {
   background-color: var(--primary-Green-500);
-  box-shadow: 1px 4px 10px hsla(171, 66%, 44%, 0.808);
+  box-shadow: 0 4px 12px hsla(171, 66%, 44%, 0.808);
 }
 
 .btn-for-mac {
   background-color: var(--primary-Blue-100);
-  margin-bottom: 5rem;
-  box-shadow: 1px 4px 10px hsla(233, 100%, 69%, 0.808);
+  box-shadow: 0 2px 12px hsla(233, 100%, 69%, 0.808);
+}
+
+.btn-for-ios:hover,
+.btn-for-mac:hover {
+  color: #fff;
+  transform: scale(1.05);
+  transition: all 0.2s ease-in-out;
+}
+
+.btn-for-ios:hover {
+  background-color: var(--btn-hover-green);
+}
+
+.btn-for-mac:hover {
+  background-color: var(--btn-hover-blue);
 }
 
 
@@ -352,6 +369,8 @@ body {
 
 .sosialmedia-links svg:hover {
   fill: aquamarine;
+  transform: scale(1.2);
+  transition: all 0.2s ease-in-out;
 }
 
 
@@ -363,6 +382,7 @@ body {
   }
 
   .img-logo-company {
+    margin-top: 7rem;
     width: clamp(6rem, 10vw, 7rem);
   }
 
@@ -450,7 +470,7 @@ body {
   .description.supercharger,
   .description.device-support,
   .description.header {
-    font-size: var(--fs-base);
+    font-size: var(--fs-sm);
     max-width: 50%;
     margin: 0 auto 3rem;
   }
@@ -461,11 +481,11 @@ body {
   }
 
   .title.header {
-    font-style: var(--fs-xl);
+    font-size: var(--fs-xl);
   }
 
   .content .title {
-    font-size: var(--fs-md);
+    font-size: var(--fs-lg);
     max-width: 100%;
   }
 
@@ -523,7 +543,7 @@ body {
 
   /* Supercharger Features */
 
-  .features-supercharger .container-features {
+  .features-supercharger .features-list {
     display: flex;
     text-align: center;
   }

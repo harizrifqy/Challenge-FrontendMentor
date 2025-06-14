@@ -1,8 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Review and confirm your annual music plan subscription. Secure payment process and the option to cancel anytime.">
+  <link rel="icon" href="./images/favicon.ico" type="image/x-icon"> <!-- Fallback -->
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <title>Frontend Mentor | Order summary card</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -10,20 +14,22 @@
   <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500,700,900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style/app.css">
 </head>
+
 <body>
   <div class="container">
     <header class="header">
-      <img class="header_img-hero" src="images/illustration-hero.svg" alt="illustration hero">
+      <img class="header_img-hero" src="images/illustration-hero.svg" alt="Person enjoying music with headphones">
     </header>
-    <main class="content">
+    <main class="content" role="main" aria-label="Main content">
       <section class="content_container">
         <h1 class="content_title">Order Summary</h1>
         <p class="content_info-order">You can now listen to millions of songs, audiobooks, and podcasts on any
           device anywhere you like!</p>
         <div class="content_annual-plan">
-          <img class="content_img-music" src="images/icon-music.svg" alt="">
-          <h2 class="content_title-annual">Annual Plan <span>$59.99/year</span></h2>
-          <a class="content_btn-change" href="#">Change</a>
+          <img class="content_img-music" src="images/icon-music.svg" alt="Music Icon" loading="lazy">
+          <h2 class="content_title-annual">Annual Plan <span class="price_tag">$59.99/year</span></h2>
+          <a class="content_btn-change" href="#" target="_blank" rel="noopener noreferrer"
+            aria-label="Change plan">Change</a>
         </div>
         <button class="content_btn-payment">Proceed to Payment</button>
         <button class="content_btn-cancel">Cancel Order</button>
@@ -31,4 +37,5 @@
     </main>
   </div>
 </body>
+
 </html>

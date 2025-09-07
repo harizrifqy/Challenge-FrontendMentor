@@ -13,12 +13,28 @@
 </head>
 
 <body>
+  <div class="container">
+    <nav class="nav">
+      <section class="navbar">
+        <div class="navbar_logo">
+          <img src="images/logo-dark.svg" alt="">
+        </div>
+        <ul class="navbar_menu">
+          <li><a class="navbar_link" href="#home">Home</a></li>
+          <li><a class="navbar_link" href="#about">About</a></li>
+          <li><a class="navbar_link" href="#contact">Contact</a></li>
+          <li><a class="navbar_link" href="#blog">Blog</a></li>
+          <li><a class="navbar_link" href="#careers">Careers</a></li>
+        </ul>
+        <button class="navbar_toggle">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+      </section>
+    </nav>
+  </div>
 
-  Home
-  About
-  Contact
-  Blog
-  Careers
 
   Request Invite
 
@@ -90,7 +106,15 @@
   Request Invite
 
   © Digitalbank. All Rights Reserved
+  <script>
+    const navToggle = document.querySelector('.navbar_toggle');
+    const navMenu = document.querySelector('.navbar_menu');
 
+    navToggle.addEventListener('click', () => {
+      navToggle.classList.toggle('active');
+      navMenu.classList.toggle('active');
+    });
+  </script>
 </body>
 
 </html>

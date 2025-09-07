@@ -162,6 +162,7 @@ section {
   --border-sm: 0.5rem;
   --border-md: 0.75rem;
   --border-lg: 1rem;
+  --border-xl: 2rem;
 
   /* Spacing scale (margin/padding/gap) */
   --space-xs: clamp(0.5rem, 0.8vw, 0.75rem);
@@ -175,18 +176,18 @@ section {
 }
 
 .container {
-  display: grid;
-  grid-template-columns: minmax(18.75rem, 1fr);
   width: 100%;
   max-width: 1200px;
+  display: grid;
+  grid-template-columns: minmax(18.75rem, 1fr);
 }
 
 
 .nav {
-  background-color: var(--Gray-100);
+  background-color: var(--White);
   display: flex;
   justify-content: center;
-  height: clamp(4.5rem, 6vw, 7rem);
+  height: clamp(4.5rem, 5vw, 7rem);
   width: 100%;
   position: fixed;
   top: 0;
@@ -196,6 +197,7 @@ section {
 .navbar {
   width: 100%;
   display: flex;
+  align-items: center;
   justify-content: space-between;
   padding: var(--space-md);
 }
@@ -211,12 +213,12 @@ section {
   display: none;
   flex-direction: column;
   position: absolute;
-  top: 6rem;
-  left: 1.5rem;
-  right: 1.5rem;
+  top: 5.75rem;
+  left: 1.25rem;
+  right: 1.25rem;
   padding: 0 var(--space-sm) var(--space-sm);
   gap: var(--space-xs);
-  background-color: var(--Gray-100);
+  background-color: var(--White);
   height: auto;
   z-index: 100;
   list-style: none;
@@ -268,7 +270,62 @@ section {
 }
 
 
-.navbar_toggle .bar { height: 0.1rem; }
+.navbar_toggle .bar {
+  height: 0.1rem;
+}
+
+
+.hero_img {
+  position: relative;
+  padding: var(--space-sm);
+}
+
+
+.hero_overlay {
+  position: absolute;
+  inset: 0;
+  /* sama dengan top:0; right:0; bottom:0; left:0 */
+  background: url("../images/bg-intro-mobile.svg") center/cover no-repeat;
+  z-index: -10;
+}
+
+.hero_content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-md);
+  text-align: center;
+  padding: var(--space-xs) var(--space-md);
+}
+
+
+.hero_title {
+  font-size: var(--fs-2xl);
+  color: var(--primary-Blue-950);
+}
+
+.hero_info {
+  color: var(--Gray-600);
+}
+
+
+.btn {
+  background: linear-gradient(to bottom, var(--primary-Green-500), var(--primary-Cyan-400));
+  color: var(--White);
+  padding: 0.75rem var(--space-lg);
+  border-radius: var(--border-xl);
+  border: none;
+  cursor: pointer;
+}
+
+.btn:hover {
+  opacity: 0.75;
+}
+
+.btn:active {
+  opacity: 0.5;
+}
+
 
 
 
@@ -297,7 +354,7 @@ section {
     height: auto;
     width: auto;
     padding: 0;
-    gap: 1rem;
+    gap: var(--space-sm);
     list-style: none;
   }
 }

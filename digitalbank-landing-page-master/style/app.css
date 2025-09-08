@@ -32,8 +32,9 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #fff;
-  color: #111;
+  color: var(--primary-Blue-950);
   font-family: "Public Sans", sans-serif;
+  font-size: var(--fs-base);
 }
 
 h1,
@@ -180,6 +181,15 @@ section {
   max-width: 1200px;
   display: grid;
   grid-template-columns: minmax(18.75rem, 1fr);
+  gap: var(--space-lg);
+}
+
+.overlay {
+  position: fixed;
+  inset: 0; 
+  background: rgba(0, 0, 0, 0.5);
+  display: none; 
+  z-index: 10; /* pastikan di atas konten tapi di bawah menu */
 }
 
 
@@ -187,7 +197,7 @@ section {
   background-color: var(--White);
   display: flex;
   justify-content: center;
-  height: clamp(4.5rem, 5vw, 7rem);
+  height: clamp(4rem, 5vw, 7rem);
   width: 100%;
   position: fixed;
   top: 0;
@@ -213,7 +223,7 @@ section {
   display: none;
   flex-direction: column;
   position: absolute;
-  top: 5.75rem;
+  top: 5.125rem;
   left: 1.25rem;
   right: 1.25rem;
   padding: 0 var(--space-sm) var(--space-sm);
@@ -225,11 +235,14 @@ section {
   text-align: center;
   padding: var(--space-md);
   border-radius: var(--border-xs);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
 }
 
 .navbar_menu.active {
   display: flex;
 }
+
+
 
 
 .navbar_link:hover {
@@ -274,6 +287,10 @@ section {
   height: 0.1rem;
 }
 
+.hero_section {
+  margin-bottom: var(--space-lg);
+}
+
 
 .hero_img {
   position: relative;
@@ -283,8 +300,7 @@ section {
 
 .hero_overlay {
   position: absolute;
-  inset: 0;
-  /* sama dengan top:0; right:0; bottom:0; left:0 */
+  inset: 0;  /* sama dengan top:0; right:0; bottom:0; left:0 */
   background: url("../images/bg-intro-mobile.svg") center/cover no-repeat;
   z-index: -10;
 }
@@ -301,7 +317,6 @@ section {
 
 .hero_title {
   font-size: var(--fs-2xl);
-  color: var(--primary-Blue-950);
 }
 
 .hero_info {
@@ -316,19 +331,138 @@ section {
   border-radius: var(--border-xl);
   border: none;
   cursor: pointer;
+  transition: transform 0.3s ease;
 }
 
 .btn:hover {
   opacity: 0.75;
+  transform: scale(1.125);
 }
 
 .btn:active {
   opacity: 0.5;
 }
 
+.features_list {
+  background-color: var(--Gray-100);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+  text-align: center;
+  padding: 3rem 1rem;
+}
+
+.features_list--title {
+  font-size: var(--fs-xl);
+}
+
+.features_list--description,
+.features_description {
+  color: var(--Gray-600);
+}
 
 
+.features {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-md);
+}
 
+.features_title {
+  font-size: var(--fs-lg);
+}
+
+.article_list {
+  padding: var(--space-lg) var(--space-md);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+.article_list--title {
+  text-align: center;
+  font-size: var(--fs-lg);
+}
+
+.article_content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  padding: var(--space-md);
+}
+
+.article_img {
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+}
+
+.article_author {
+  font-size: var(--fs-sm);
+  color: var(--Gray-600);
+}
+
+.article_title {
+  font-size: var(--fs-md);
+}
+
+.article_info {
+  color: var(--Gray-600);
+}
+
+
+.footer {
+  background-color: var(--primary-Blue-950);
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-lg);
+}
+
+.footer_logo {
+  display: flex;
+  justify-content: center;
+}
+
+.footer_nav {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+  color: var(--Gray-100);
+  text-align: center;
+}
+
+.footer_media--sosial {
+  display: flex;
+  gap: var(--space-sm);
+  list-style: none;
+}
+
+.footer_media--sosial svg {
+  transition: transform 0.3s ease;
+}
+
+.footer_media--sosial svg:hover {
+  transform: scale(1.25);
+}
+
+.footer_navigation {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+  font-size: var(--fs-sm);
+}
+
+.footer_link:hover {
+  text-decoration: underline;
+}
+
+.footer_copyright {
+  color: var(--Gray-600);
+  font-size: var(--fs-sm);
+}
 
 
 @media (min-width: 55em) {
